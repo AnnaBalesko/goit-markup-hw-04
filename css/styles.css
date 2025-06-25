@@ -107,10 +107,20 @@ img {
 .list-cont .contacts-link:focus {
   color: #404bbf;
 }
-.home-page:active,
-.home-page::after {
+.nav-item {
+  position: relative;
+}
+.nav-link:active::after {
+  display: block;
   content: "";
   text-decoration: underline;
+  width: 100%;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  transition: 0.4s;
+  background-color: #404BBF;
 }
 /* section-hero */
 .section-hero {
@@ -120,15 +130,17 @@ img {
       rgba(46, 47, 66, 0.7)
     ),
     url(https://c.pxhere.com/images/d1/df/d08ed2d616fb4a365724bc6a3614-1434201.jpg!d);
-  background-size: cover;
+  max-width: 1440px;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #2e2f42;
   display: flex;
   padding: 188px 0;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
+  margin: auto;
 }
 .hero-title {
   max-width: 496px;
@@ -224,6 +236,25 @@ img {
 .team-card {
   padding: 32px 0;
   text-align: center;
+}
+.social-link {
+  background-color: #4D5AE5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: #404BBF;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  fill: none;
+  margin-top: 8px;
 }
 .item-team {
   background-color: #ffffff;
