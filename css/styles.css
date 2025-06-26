@@ -371,6 +371,9 @@ img {
   display: flex;
   flex-direction: column;
 }
+.container-logo {
+  margin: 0;
+}
 .footer-social .social-list {
 display: flex;
 gap: 16px;
