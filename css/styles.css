@@ -78,7 +78,7 @@ img {
 .header-logo .logo-web {
   color: #2e2f42;
 }
-.nav-list .nav-item .nav-link {
+.nav-link {
   display: block;
   padding: 24px 0;
   color: #2e2f42;
@@ -109,12 +109,12 @@ img {
 }
 .current {
   position: relative;
-   color: #404BBF;
+  color: #404bbf;
 }
 
 .nav-link.current::after {
   display: block;
-  content: '';
+  content: "";
   left: 0;
   width: 100%;
   bottom: -1px;
@@ -230,12 +230,10 @@ img {
 
 .section-team {
   background-color: #f4f4fd;
-  text-align: center;
   padding: 120px 0;
 }
 .team-card {
   padding: 32px 0;
-  text-align: center;
 }
 .social-items {
   display: flex;
@@ -245,15 +243,17 @@ img {
   height: 40px;
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-items:hover,
 .social-items:focus {
   background-color: #404bbf;
   border-radius: 50%;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.social-link {
+  line-height: 0;
+}
 .social-list {
   display: flex;
   flex-direction: row;
@@ -356,7 +356,40 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  margin-right: 120px;
 }
+.footer-social .page-text {
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.end-page > .container {
+  display: flex;
+  align-items: baseline;
+}
+.container .footer-social {
+  display: flex;
+  flex-direction: column;
+}
+.footer-social .social-list {
+display: flex;
+gap: 16px;
+}
+.footer-social .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social .social-link:hover,
+.footer-social .social-link:focus {
+  background-color: #31d0aa;
+ }
 .end-page {
   background-color: #2e2f42;
   height: 312px;
