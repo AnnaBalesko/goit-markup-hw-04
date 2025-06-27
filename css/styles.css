@@ -42,6 +42,9 @@ img {
 /* header */
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
 }
 .header-container {
   display: flex;
@@ -55,13 +58,11 @@ img {
   display: flex;
   align-items: center;
   gap: 40px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-cont {
   display: flex;
   align-items: center;
   gap: 40px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-logo {
   padding: 24px 0;
@@ -88,6 +89,7 @@ img {
   line-height: 1.5;
   font-weight: 500;
   font-size: 16px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address {
@@ -102,6 +104,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-list .nav-item .nav-link:hover,
 .list-cont .contacts-link:hover,
@@ -134,6 +137,7 @@ img {
     ),
     url(https://c.pxhere.com/images/d1/df/d08ed2d616fb4a365724bc6a3614-1434201.jpg!d);
   max-width: 1440px;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #2e2f42;
@@ -238,23 +242,22 @@ img {
 .team-card {
   padding: 32px 0;
 }
-.social-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.social-items .social-link {
+  line-height: 0;
   width: 40px;
   height: 40px;
   background-color: #4d5ae5;
+  fill: #f4f4fd;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.social-items:hover,
-.social-items:focus {
+.social-items .social-link:hover,
+.social-items .social-link:focus {
   background-color: #404bbf;
-}
-.social-link {
-  line-height: 0;
 }
 .social-list {
   display: flex;
@@ -416,6 +419,7 @@ img {
   justify-content: center;
   width: 40px;
   height: 40px;
+  fill: #f4f4fd;
   background-color: #4d5ae5;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
